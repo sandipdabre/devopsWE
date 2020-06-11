@@ -1,0 +1,16 @@
+    1  ansible --version
+    2  ansible-doc -l
+    3  ansible-doc copy
+    4  vim /mnt/san.txt 
+    5  ansible -m copy -a "src=/mnt/san.txt dest=/root" webserver
+    6  ansible -m command -a "ls /root" webserver
+    7  ansible-doc copy
+    8  ansible -m copy -a "src=/mnt/san.txt dest=/mnt/test.txt owner=sandip mode=0600" dbserver
+    9  ansible -m setup webserver
+   10  ansible -m setup -a "filter=ansible_processor" webserver
+   11  ansible -m setup -a "filter=ansible_user" webserver
+   12  ansible -m setup -a "filter=ansible_user*" webserver
+   13  ansible -m yum -a "name=git state=present" webserver
+   14  ansible-doc git
+   15  ansible -m git -a "repo=https://github.com/sandipdabre/gitjenkins.git dest=/mnt/gitrepo" webserver
+   16  history 

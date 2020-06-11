@@ -1,0 +1,31 @@
+ADHOC Commend:-
+yum install httpd
+ansible -m yum -a "name=httpd state=latest" allserver
+
+systemctl restart httpd
+service httpd start
+
+ansible -m service -a "name=httpd state=started" webserver
+
+
+ansible -m firewalld -a "service=http permanent=yes state=enabled" webserver
+
+Playbook.yaml
+
+---
+- hosts: webserver
+  become: true
+  become_user: root
+  tasks:
+  - name: Install HTTPD
+    yum: name=httpd state=present
+
+  - name: Service Httpd Start
+    service: name=httpd state=started
+
+  - name: Install Git
+    yum: name=git state=present
+
+  - name: Deploying data from GIT
+    git: repo=https://github.com/sandipdabre/gitjenkins.git dest=/var/www/html
+                                                                                     16,5          All

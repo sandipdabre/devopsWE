@@ -1,0 +1,16 @@
+---
+- hosts: allserver
+  become: true
+  become_user: root
+  tasks:
+  - name: Install tomcat
+    yum: name=tomcat  state=installed
+
+  - name: Start tomcat service
+    service: name=tomcat state=started
+
+  - name: Firewall with :8080 port
+    firewalld: port=8080/tcp permanent=yes state=enabled
+
+  - name: Deploy War file
+    get_url: url=https://tomcat.apache.org/tomcat-7.0-doc/appdev/sample/sample.war dest=/usr/share/tomcat/webapps

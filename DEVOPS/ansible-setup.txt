@@ -1,0 +1,54 @@
+  113  hostnamectl set-hostname ansible.example.com
+  114  ip r
+  115  python --version
+  116  id sandip
+  117  vim /etc/ssh/sshd_config 
+  118  vim /etc/sudoers
+  119  systemctl restart sshd
+  120  ip r
+  121  ping 192.168.243.129
+  122  ping 192.168.243.130
+  123  ssh-keygen 
+  124  ls -a
+  125  cd .ssh/
+  126  ls
+  127  cat id_rsa.pub 
+  128  cd
+  129  ssh-copy-id root@192.168.243.129
+  130  ssh-copy-id root@192.168.243.130
+  131  ssh root@192.168.243.130
+  132  ssh root@192.168.243.129
+  133  ansible --version
+  134  yum list -y |grep ansible
+  135  yum install epel-release
+  136  yum install ansible -y
+  137  ansible --version
+  138  cd /etc/ansible/
+  139  ls
+  140  vim ansible.cfg 
+  141  vim /etc/ansible/hosts 
+  142  systemctl restart ansible
+  143  cd
+  144  ping 192.168.243.129
+  145  ansible -m ping webserver
+  146  ansible -m ping dbserver
+  147  ansible -m ping allserver
+  148  ansible -m command -a "uptime" websever
+  149  ansible -m command -a "uptime" webserver
+  150  ansible -m command -a "mkdir /mnt/test1" webserver
+  151  ansible -m command -a "ls /mnt/" webserver
+  152  ansible -m command -a "mkdir /mnt/test1" allserver
+  153  ansible-doc -l
+  154  ansible-doc -l |grep user
+  155  ansible-doc user
+  156  ansible -m user -a "name=john password=passwd" allserver
+  157  ansible -m yum -a "name=httpd state=present" webserver --become
+  158  ansible -m service -a "name=httpd state=started" webserver 
+  159  ansible-doc firewall
+  160  ansible-doc firewalld
+  161  ansible -m firewalld -a "service=http state=enabled" webserver
+  162  ansible -m setup localhost
+  163  ansible -m setup localhost |grep address
+  164  ansible -m setup webserver
+  165  history 
+

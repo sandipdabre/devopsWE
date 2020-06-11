@@ -1,0 +1,49 @@
+    2  hostnamectl set-hostname ansible.example.com
+    3  hostname
+    4  ip r
+    5  ping 192.168.243.134
+    6  ping 192.168.243.135
+    7  id sandip
+    8  vim /etc/sudoers
+    9  systemctl restart sshd
+   10  ssh root@192.168.243.134
+   11  ssh root@192.168.243.135
+   12  ssh-keygen 
+   13  ls -a
+   14  ls .ssh/
+   15  cat .ssh/id_rsa
+   16  cat .ssh/id_rsa.pub 
+   17  ssh-copy-id root@192.168.243.134
+   18  ssh root@192.168.243.134
+   19  ssh-copy-id root@192.168.243.135
+   20  ssh root@192.168.243.135
+   21  ansible --version
+   22  yum list -y|grep ansible
+   23  yum install epel-release
+   24  yum list -y|grep ansible
+   25  ls /etc/yum.repos.d/
+   26  yum install ansible -y
+   27  ansible --version
+   28  cd /etc/ansible/
+   29  ls
+   30  ip r
+   31  ls
+   32  vim hosts 
+   33  vim ansible.cfg 
+   34  ########################################################
+   35  ping 192.168.243.134
+   36  ansible -m ping webserver
+   37  ansible -m ping dbserver
+   38  ansible -m command -a "ls /root" webserver
+   39  ansible -m command -a "ls /root" dbserver
+   40  ansible -m command -a "ls /root" allserver
+   41  ansible -m command -a "uptime" allserver
+   42  ansible-doc -l
+   43  ansible-doc -l |grep user
+   44  ansible-doc user
+   45  vim /usr/lib/python2.7/site-packages/ansible/modules/system/user.py
+   46  ansible -m user -a "name=john" webserver
+   47  ansible -m user -a "name=natasha password=natasha" dbserver
+   48  ansible -m yum -a "name=httpd state=present" webserver --become
+   49  ansible -m service -a "name=httpd state=started" webserver --become
+   50  history 

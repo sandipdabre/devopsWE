@@ -1,0 +1,111 @@
+   58  docker --version
+   59  cat /etc/os-release 
+   60  yum install docker -y
+   61  docker --version
+   62  docker --help
+   63  docker images 
+   64  systemctl restart docker
+   65  systemctl enable docker
+   66  docker images 
+   67  docker ps 
+   68  docker ps -a
+   69  docker run ubuntu
+   70  docker images 
+   71  docker ps 
+   72  docker ps -a
+   73  docker start 27434215fea3
+   74  docker ps 
+   75  docker ps -a
+   76  docker attach 27434215fea3
+   77  docker start 27434215fea3
+   78  docker attach 27434215fea3
+   79  docker images 
+   80  docker run -it --name newUbuntu docker.io/ubuntu
+   81  docker ps 
+   82  docker ps -a
+   83  docker start newUbuntu 
+   84  docker ps 
+   85  docker ps -a
+   86  docker images 
+   87  docker run docker.io/ubuntu --name thirdUbuntu
+   88  docker run --name thirdubuntu docker.io/ubuntu
+   89  docker images 
+   90  docker ps -a
+   91  docker rm 888393a9d82e
+   92  docker ps -a
+   93  docker ps
+   94  docker attach 4ec1c592634b
+   95  docker start 4ec1c592634b
+   96  docker attach 4ec1c592634b
+   97  docker ps -a
+   98  docker ps 
+   99  docker attach 6d651816c5d2
+  100  docker ps 
+  101  docker ps -a
+  102  docker start 27434215fea3
+  103  docker ps 
+  104  docker ps -a
+  105  docker start 4ec1c592634b
+  106  docker ps -a
+  107  docker start 6d651816c5d2
+  108  docker ps -a
+  109  docker attach 6d651816c5d2
+  110  docker ps -a
+  111  docker rm 4ec1c592634b
+  112  docker start 6d651816c5d2
+  113  docker ps -a
+  114  docker rm 27434215fea3
+  115  docker ps -a
+  116  docker rm 6d651816c5d2
+  117  docker stop 6d651816c5d2
+  118  docker ps -a
+  119  docker rm 6d651816c5d2
+  120  docker ps -a
+  121  docker image
+  122  docker images 
+  123  docker run docker.io/ubuntu
+  124  docker ps -a
+  125  docker start silly_goodall 
+  126* docker ps -
+  127  docker attach 3941864a29fd
+  128  docker run -it docker.io/ubuntu
+  129  docker ps -a
+  130  docker start 21049a04c9b7
+  131  docker ps -a
+  132  docker attach 21049a04c9b7
+  133  docker ps -a
+  134  docker run -itd docker.io/ubuntu
+  135  docker ps -a
+  136  docker attach ca221d1c55da
+  137  docker ps -a
+  138  docker attach ca221d1c55da
+  139  docker start ca221d1c55da
+  140  docker ps -a
+  141  docker attach ca221d1c55da
+  142  docker ps -a
+  143  docker run -itd --name sandip_ubuntu docker.io/ubuntu
+  144  docker ps -a
+  145  docker attach sandip_ubuntu 
+  146  docker ps -a
+  147  docker ps 
+  148  docker start e7d62da21575
+  149  docker attach sandip_ubuntu 
+  150  docker ps
+  151  history 
+  152  docker run -itd --name small_alpine docker.io/alpine
+  153  docker ps
+  154  docker images 
+  155  docker attach small_alpine 
+  156  docker ps
+  157  docker ps -a
+  158  top
+  159  docker ps -a
+  160  docker ps
+  161  docker stop sandip_ubuntu 
+  162  docker ps
+  163  docker stop angry_bassi 
+  164  docker ps
+  165  docker images 
+  166  docker inspect docker.io/alpine
+  167  cd /var/lib/docker/
+  168  ls

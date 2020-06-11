@@ -1,0 +1,98 @@
+    1  #### Docker
+    2  docker ps
+    3  docker ps -a
+    4  docker start 67782e53a4a2
+    5  docker ps -a
+    6  docker attach 67782e53a4a2
+    7  docker ps
+    8  docker ps -a
+    9  docker start 67782e53a4a2
+   10  docker attach 67782e53a4a2
+   11  docker ps
+   12  docker ps -a
+   13  docker ps
+   14  docker run --name centos-git centos:7
+   15  docker ps -a
+   16  docker images 
+   17  docker start centos-git 
+   18  docker ps -a
+   19  history 
+   20  docker run --name centos-jenkins centos
+   21  docker ps -a
+   22* docker rm 
+   23  docker ps -a
+   24  docker rm 67782e53a4a2
+   25  docker stop eloquent_montalcini 
+   26  docker ps -a
+   27  docker rm 67782e53a4a2
+   28  docker ps
+   29  docker ps -a
+   30  docker rm *
+   31  docker ps -a
+   32  docker rm centos-git 
+   33  docker rm centos-jenkins 
+   34  docker ps -a
+   35  docker images 
+   36  docker rmi 470671670cac
+   37  docker images 
+   38  docker run --name ubuntu-git ubuntu
+   39  docker ps 
+   40  docker ps -a
+   41  docker rm ubuntu-git 
+   42  docker images 
+   43  docker run -it --name ubuntu-git ubuntu
+   44  docker ps -a
+   45  docker exec -it a103f9bf7408 bash
+   46  docker ps -a
+   47  docker attach a103f9bf7408 
+   48  docker ps -a
+   49  docker volume ls
+   50  docker images 
+   51  docker run -it --name centos-vom -v volume1:/data1 centos:7
+   52  docker volume ls
+   53  docker volume inspect volume1 
+   54  cd /var/lib/docker/volumes/volume1/_data
+   55  pwd
+   56  ls
+   57  docker ps
+   58  mkdir sandip
+   59  ls
+   60  cat > index.html 
+   61  cat index.html 
+   62  ls
+   63  docker attach centos-vom 
+   64  cd
+   65  docker ps 
+   66  docker ps -a
+   67  cd /var/lib/docker/volumes/
+   68  ls
+   69  cd volume1/
+   70  ls
+   71  cd _data/
+   72  ls
+   73  ls /root/
+   74  cp /root/anaconda-ks.cfg .
+   75  ls
+   76  docker ps 
+   77  docker ps -a
+   78  docker start centos-vom 
+   79  docker attach centos-vom 
+   80  docker ps -a
+   81  cd
+   82  docker rm centos-vom 
+   83  docker ps -a
+   84  cd -
+   85  ls
+   86  cd
+   87  docker run -it --name centos-vom -v volume1:/data1 centos:7
+   88  docker ps -a
+   89  ls
+   90  docker cp centos-vom:/container.file .
+   91  ls
+   92  touch local.file
+   93  ls
+   94  docker cp local.file centos-vom:/
+   95  docker ps -a
+   96  docker start centos-vom 
+   97  docker attach centos-vom 
+   98  history 

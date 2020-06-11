@@ -1,0 +1,6 @@
+java installation for windows 10 64 bit
+https://java.com/en/download/win10.jsp
+
+
+install maven for windows 10
+https://maven.apache.org/install.html

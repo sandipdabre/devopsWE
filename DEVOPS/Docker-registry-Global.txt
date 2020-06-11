@@ -1,0 +1,19 @@
+   36  docker --version
+   37  yum install docker -y
+   38  docker images
+   39  systemctl restart docker
+   40  systemctl enable docker
+   41  docker images
+   42  docker search ubuntu
+   43  docker run -it --name mycontainer ubuntu
+   44  docker ps
+   45  docker ps -a
+   46  docker images
+   47  docker commit 1a41486acee2 sandysdocker/myubuntu:2
+   48  docker images
+   49  docker tag 1d622ef86b13 sandysdocker/newdocker
+   50  docker images
+   51  docker push sandysdocker/myubuntu:2
+   52  docker login 
+   53  docker push sandysdocker/myubuntu:2
+   54  history 

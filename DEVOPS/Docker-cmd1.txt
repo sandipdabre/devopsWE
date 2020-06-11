@@ -1,0 +1,60 @@
+    1  # Docker 
+    2  yum install docker -y
+    3  docker --version 
+    4  docker info 
+    5  docker images 
+    6  docker images ls
+    7  docker ps 
+    8  docker ps -a
+    9  docker ps -l
+   10  docker inspect 8a4b616dd870
+   11  cd /var/lib/docker/containers
+   12  ls
+   13  cd 8a4b616dd870a1010eb2c7e149b8311b17384997f8db0b6e9dbf430928ebf42f/
+   14  ls
+   15  cd
+   16  docker images ls
+   17  docker images
+   18  docker rmi 470671670cac
+   19  docker ps -a
+   20  docker rmi 5e35e350aded
+   21  docker images
+   22  docker ps 
+   23  docker ps -a
+   24  docker rm 8a4b616dd870
+   25  docker ps -a
+   26  docker images
+   27  docker rmi 470671670cac
+   28  docker images
+   29  docker ps -a
+   30* 
+   31  docker search centos
+   32  docker search centos:7
+   33  docker pull centos:7
+   34  docker images 
+   35  docker images -l
+   36  docker images ls
+   37  docker run centos
+   38  docker images ls
+   39  docker ps -a
+   40  docker images ls
+   41  docker images
+   42  docker run centos:7
+   43  docker ps -a
+   44  docker attach 40a9657f56c6
+   45  docker ps 
+   46  docker start 40a9657f56c6
+   47  docker ps 
+   48  docker ps -a
+   49  docker attach 40a9657f56c6
+   50  docker run -itd centos:7
+   51  docker ps
+   52  docker attach d397a524f267
+   53  docker ps
+   54  docker ps -a
+   55  docker run -d centos:7
+   56  docker ps 
+   57  docker ps -a
+   58  docker run -it centos:7
+   59  docker ps 
+   60  history 

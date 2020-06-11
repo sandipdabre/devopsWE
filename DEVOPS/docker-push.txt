@@ -1,0 +1,47 @@
+    1  docker
+    2  yum update 
+    3  yum install docker
+    4  systemctl restart docker
+    5  systemctl enable docker
+    6  docker ---version
+    7  docker --version
+    8  docker images
+    9  docker run -it --name ubuntu:docker ubuntu
+   10  docker run -it --name ubuntu_docker ubuntu
+   11  docker ps
+   12  docker images
+   13  docker ps -a
+   14  docker ps -a
+   15  docker commit 7ded3b362c49 ubuntu:sandip
+   16  docker images
+   17  docker login --username=sandysdocker
+   18  docker images
+   19  docker tag b053a110f48e sandysdocker/ubuntu:sandata
+   20  docker images
+   21  docker push sandysdocker/ubuntu:sandata
+   22  docker search ubuntu:sandata
+   23  history 
+   24  history -d 14
+   25  history 
+   26  docker search registry
+   27  ###################################
+   28  docker search registry
+   29  docker run -d -p 5000:5000 --restart=always --name registrys regisry:2
+   30  docker run -d -p 5000:5000 --restart=always --name registrys registry:2
+   31  docker ps
+   32  docker inspect 8458c916c345
+   33  ip r
+   34  docker images
+   35  docker tag 8458c916c345 172.31.3.222:5000/ubuntu:sandip
+   36  docker tag b053a110f48e 172.31.3.222:5000/ubuntu:sandip
+   37  docker images
+   38  docker push 172.31.3.222:5000/ubuntu:sandip
+   39  docker push 172.31.3.222:5000/ubuntu
+   40  docker push localhost:5000/ubuntu:sandip
+   41  docker push 172.31.3.222:5000/ubuntu:sandip
+   42  docker ps
+   43  docker inspect 8458c916c345
+   44  docker tag b053a110f48e 172.17.0.2:5000/ubuntu:sandip
+   45  docker push 172.17.0.2:5000/ubuntu:sandip
+   46  docker ps
+   47  ip r

@@ -1,0 +1,26 @@
+   55  ##########################################
+   56  # Local/private Docker Registry
+   57  ip r
+   58  docker search registry
+   59  docker run -d -p 5000:5000 --restart=always --name myregistry registry:2
+   60  docker images 
+   61  docker ps 
+   62  docker tag 1d622ef86b13 localhost:5000/localimage
+   63  docker images 
+   64  hostname
+   65  docker tag 1d622ef86b13 ansible.example.com:5000/localimage
+   66  ip r
+   67  docker tag 1d622ef86b13 192.168.243.136:5000/localimage
+   68  docker images 
+   69  docker push localhost:5000/localimage
+   70  docker run -it --name mylocalcontainer localhost:5000/localimage
+   71  ip r
+   72  docker ps 
+   73  docker stop myregistry
+   74  docker run -it --name mylocalcontainer1 localhost:5000/localimage
+   75  docker images 
+   76  docker ps 
+   77  docker ps -a
+   78  docker rm -v myregistry 
+   79  docker ps -a
+   80  history 

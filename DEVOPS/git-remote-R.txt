@@ -1,0 +1,101 @@
+    1  mkdir proj2
+    2  cd proj2/
+    3  ls -a
+    4  git init
+    5  ls -a
+    6  git status 
+    7  git branch 
+    8  touch file1
+    9  git add file1
+   10  git commit -m "file1 added"
+   11  git status 
+   12  git log --oneline 
+   13  touch file2
+   14  git add file2
+   15  git commit -m "file2 added"
+   16  ls -la
+   17  ls -l
+   18  git log --oneline 
+   19  git checkout -b branch1
+   20  git branch 
+   21  ls
+   22  git log --oneline 
+   23  vim file2 
+   24  git status 
+   25  git commit -am "file2 is modified"
+   26  git log --oneline 
+   27  git log --oneline master 
+   28  git checkout master 
+   29  git log --oneline 
+   30  git status 
+   31  vim file2 
+   32  git status 
+   33  git commit -am "file2 is modified"
+   34  git log --oneline 
+   35  git log --oneline branch1 
+   36  git checkout branch1 
+   37  git rebase master 
+   38  vim file2 
+   39  git status 
+   40  git commit -am "from M to B"
+   41  git log --oneline 
+   42  git checkout master 
+   43  git branch 
+   44  git merge branch1 master 
+   45  vim file2 
+   46  git status 
+   47  git commit -am "from B to M"
+   48  git status 
+   49  git rebase --continue
+   50  git checkout branch1 
+   51  git rebase --continue
+   52* git status 
+   53* git rebase --continue
+   54  ls
+   55  git status 
+   56  git branch 
+   57  git checkout master 
+   58  git branch 
+   59  git status 
+   60  cd ..
+   61  ls
+   62  cd project/
+   63  ls
+   64  ls -a
+   65  git remote add origin https://github.com/sandipdabre/devops9.git
+   66  git push origin master 
+   67  git branch 
+   68  git push origin branch1 
+   69  cd ..
+   70  ls
+   71  mkdir newproject
+   72  cd newproject/
+   73  ls
+   74  ls -a
+   75  git clone https://github.com/sandipdabre/JenkinsGitMaven.git
+   76  ls
+   77  cd JenkinsGitMaven/
+   78  ls
+   79  cd ../../project/
+   80  ls
+   81  touch file11111111.txt
+   82  ls
+   83  git add file11111111.txt
+   84  git commit -m "file1.txt"
+   85  ls
+   86  git branch 
+   87  git push origin master 
+   88  cd ../newproject/JenkinsGitMaven/
+   89  git fetch master
+   90  git fetch origin 
+   91  ls
+   92  git pull origin 
+   93  ls
+   94  git fetch origin 
+   95  history 
+   96  cd ../../project/
+   97  git branch 
+   98  git branch -d branch1 
+   99  git branch 
+  100  git push origin --delete branch1
+  101  history 

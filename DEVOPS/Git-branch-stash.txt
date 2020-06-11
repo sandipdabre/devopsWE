@@ -1,0 +1,147 @@
+  123  git status 
+  124  ls
+  125  git branch 
+  126  git checkout -b branch1 master 
+  127  git checkout branch1 
+  128  git status 
+  129  ls
+  130  touch branch1.txt
+  131  git status 
+  132  git add branch1.txt
+  133  git status 
+  134  git commit -m "added b1.txt in branch1"
+  135  git status 
+  136  ls
+  137  git ls-files
+  138  git branch 
+  139  git checkout master 
+  140  git ls-files
+  141  git log --oneline 
+  142  git checkout branch1 
+  143  git log --oneline 
+  144  git branch 
+  145  #git merge <source-branch> <destination>
+  146  git log --oneline 
+  147  git branch 
+  148  git log --oneline master 
+  149  git merge branch1 master 
+  150  git status 
+  151  git checkout master 
+  152  git log --oneline 
+  153  ls
+  154  git merge branch1 master 
+  155  git status 
+  156  git log --oneline 
+  157  git branch 
+  158  git status 
+  159  git branch master 
+  160  git checkout master 
+  161  git ls-files
+  162  vim index.html 
+  163  git status 
+  164  git commit -am "index from master"
+  165  git checkout branch1 
+  166  vim index.html 
+  167  git status 
+  168  git commit -am "index from branch1"
+  169  git status 
+  170  git checkout master 
+  171  git status 
+  172  cat index.html 
+  173  git merge branch1 
+  174  git log --oneline 
+  175  vim index.html 
+  176  git merge branch1 
+  177  git status 
+  178  git add index.html
+  179  git commit -m "resolved merged comflict"
+  180  git status 
+  181  git log --oneline 
+  182  git branch 
+  183  vim secret.log
+  184  git add secret.log
+  185  git commit -m "secret from master"
+  186  git ls-files
+  187  git checkout branch1 
+  188  git ls-files
+  189  vim secret.log
+  190  git status 
+  191  git add secret.log
+  192  git commit -m "secret from branch1"
+  193  git status 
+  194  git log --oneline 
+  195  git log --oneline master 
+  196  git checkout master 
+  197  git merge branch1 master 
+  198  vim secret.log 
+  199  git status 
+  200  git commit -am "resolved secret conflict"
+  201  git log --oneline 
+  202  git status 
+  203  ls -a
+  204  vim san.info
+  205  git status 
+  206  git add san.info
+  207  git status 
+  208  git stash 
+  209  git stash list 
+  210  git status 
+  211  git stash list 
+  212  git show stash@{0}
+  213  git stash pop stash@{0} 
+  214  git status 
+  215  ls
+  216  vim login.java 
+  217  git status 
+  218  git stash list 
+  219  git stash 
+  220  git stash list 
+  221  git status 
+  222  git stash list 
+  223  git show stash@{0}
+  224  git log --oneline 
+  225  ls
+  226  git stash clear 
+  227  git stash list 
+  228  ls
+  229  git log --oneline 
+  230  git status 
+  231  git ls-files
+  232  git status 
+  233  ls
+  234  cat login.java 
+  235  vim abcd.txt
+  236  git status 
+  237  git add abcd.txt
+  238  git stash list 
+  239  git stash
+  240  git stash list 
+  241  git status 
+  242  vim login.java 
+  243  git status 
+  244  git stash list 
+  245  git stash
+  246  git stash list 
+  247  git stash pop stash@{0}
+  248  git status 
+  249  git stash list 
+  250  git stash clear 
+  251  git stash list 
+  252  git status 
+  253  ls
+  254  git commit -am "added"
+  255  git status 
+  256  ls
+  257  cat >> abc.txt 
+  258  cat >> branch1.txt 
+  259  cat >> file1.txt 
+  260  git status 
+  261  git stash -p
+  262  git stash list 
+  263  git status 
+  264  git commit -am "file1.txt"
+  265  git status 
+  266  git stash list 
+  267  git show stash@{0}
+  268  git stash pop stash@{0}
+  269  git log --oneline 

@@ -1,0 +1,16 @@
+# step 1:
+#copy git-completion.bash file to home directory
+
+#command
+cp git-completion.bash  ~/.git-completion.bash
+
+# step 2: 
+#Add following line to your ~/.bash_profile.
+#This tells bash to run git-auto-complete script if it exists
+
+#command
+#vim ~/.bash_profile  
+
+if [ -f ~/.git-completion.bash ]; then
+ . ~/.git-completion.bash
+fi

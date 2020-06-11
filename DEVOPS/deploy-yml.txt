@@ -1,0 +1,17 @@
+[root@ip-172-31-23-16 k8s]# vim deploy.yml
+apiVersion: extensions/v1beta1
+kind: Deployment
+metadata:
+    name: deploy1
+spec:
+    replicas: 4
+    template:
+       metadata:
+          labels:
+             app: app-v1
+       spec:
+          containers:
+          - name: sample-container
+            image: docker.io/nginx
+            ports:
+            - containerPort: 8989

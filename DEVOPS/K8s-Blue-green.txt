@@ -1,0 +1,41 @@
+    1  # Blue - green 
+    2  kubectl get deploy
+    3  kubectl get svc
+    4  kubectl delete svc service1
+    5  kubectl delete deploy deploy1
+    6  kubectl get svc
+    7  kubectl get deploy
+    8  ls
+    9  mv deploy-httpd.yml deploy2.yml
+   10  mv deploy.yml deploy1.yml
+   11  ls
+   12  mv service-lb.yml service-lb1.yml 
+   13  cp service-lb1.yml service-lb2.yml 
+   14  ls
+   15  vim deploy1.yml 
+   16  vim service-lb1.yml 
+   17  vim deploy2.yml 
+   18  vim service-lb2.yml 
+   19  kubectl create -f deploy1.yml 
+   20  kubectl create -f service-lb1.yml 
+   21  kubectl get deploy
+   22  kubectl get svc
+   23  kubectl get rs
+   24  ########
+   25  kubectl create -f deploy2.yml 
+   26  kubectl create -f service-lb2.yml 
+   27  kubectl get deploy
+   28  kubectl get svc
+   29  kubectl get rs
+   30  kubectl get pods
+   31  ls
+   32  cp service-lb1.yml service-lb-BG.yml
+   33  vim service-lb-BG.yml 
+   34  kubectl apply -f service-lb-BG.yml 
+   35  kubectl get deploy
+   36  kubectl get svc
+   37  kubectl get rs
+   38  kubectl get pods
+   39  kubectl delete deploy deploy1
+   40  kubectl delete svc service2
+   41  history 

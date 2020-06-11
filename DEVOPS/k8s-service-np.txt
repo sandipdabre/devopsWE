@@ -1,0 +1,16 @@
+[root@ip-172-31-23-16 k8s]# vim service-np.yml
+apiVersion: v1
+kind: Service
+metadata:
+    name: service1
+    labels:
+      name: app-v1
+
+spec:
+   ports:
+   - port: 80
+     nodePort: 30006
+     protocol: TCP
+   selector:
+        app: app-v1
+   type: NodePort

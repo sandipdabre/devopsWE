@@ -1,0 +1,16 @@
+[root@ip-172-31-23-16 k8swe]# vim pod1.yml
+apiVersion: v1
+kind: Pod
+metadata:
+    name: sample-pod
+    labels:
+      zone: prod
+      version: v1
+
+spec:
+   containers:
+   - name: sample-container
+     image: docker.io/nginx
+     ports:
+     - containerPort: 80
+

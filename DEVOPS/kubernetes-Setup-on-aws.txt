@@ -1,0 +1,51 @@
+#get-pip.py download
+curl -O https://bootstrap.pypa.io/get-pip.py
+python get-pip.py --user
+ls -a ~
+export PATH=~/.local/bin:$PATH
+source ~/.bash_profile
+pip
+
+#AWS CLI
+pip install --upgrade --user
+aws --version
+aws configure
+
+#EKSCTL configure
+
+curl --silent --location "https://github.com/weaveworks/eksctl/releases/download/0.19.0/eksctl_Linux_amd64.tar.gz" |tar xz -C /tmp
+mv /tmp/eksctl /usr/local/bin
+eksctl version
+
+#KUBECTL
+curl -o kubectl https://amazon-eks.s3.us-west-2.amazonaws.com/1.14.6/2019-08-22/bin/linux/amd64/kubectl
+chmod +x ./kubectl
+mkdir -p $HOME/bin && cp ./kubectl $HOME/bin/kubectl && export PATH=$PATH:$HOME/bin
+echo 'export PATH=$PATH:$HOME/bin' >> ~/.bashrc
+kubectl version --short --client
+
+#AWS-IAM-AUTHENTICATOR
+
+curl -o aws-iam-authenticator https://amazon-eks.s3.us-west-2.amazonaws.com/1.14.6/2019-08-22/bin/linux/amd64/aws-iam-authenticator
+openssl sha1 -sha256 aws-iam-authenticator
+chmod +x ./aws-iam-authenticator
+mkdir -p $HOME/bin && cp ./aws-iam-authenticator $HOME/bin/aws-iam-authenticator && export PATH=$PATH:$HOME/bin
+aws-iam-authenticator help
+
+#CLUSTER CREATION
+eksctl create cluster --name eksdemo --version 1.14 --region us-east-2 --nodegroup-name std-workers --node-type t2.micro --nodes 2 --nodes-min 1 --nodes-max 3 --managed
+
+# After Installation Run Cmd
+#aws eks update-kubeconfig --name eksdemo
+
+
+#To Delete Cluster
+#CMD
+# eksctl delete cluster --name eksdemo
+#Note
+#aslo delete NatGateway and release Elestic IP 
+
+#EKS DOCS
+#https://docs.aws.amazon.com/eks/latest/userguide/what-is-eks.html
+#https://docs.aws.amazon.com/eks/latest/userguide/getting-started-eksctl.html
+#https://aws.amazon.com/eks/faqs/

@@ -1,0 +1,357 @@
+[root@ip-172-31-23-16 k8swe]# 
+[root@ip-172-31-23-16 k8swe]# history 
+    1  vim eks.sh
+    2  sh eks.sh 
+    3  cd k8s/
+    4  ls
+    5  cat deploy.yml 
+    6  kubectl get nodes
+    7  kubectl get deploy
+    8  kubectl get pods
+    9  kubectl get pods -o wide
+   10  history 
+   11  cat deploy.yml 
+   12  kubectl get rs
+   13  eksctl delete cluster --name eksdemo
+   14  aws eks update-kubeconfig --name eksdemo
+   15  mkdir k8s
+   16  ls
+   17  cd k8s/
+   18  ls
+   19  kubectl get nodes
+   20  vim deploy.yml
+   21  ls
+   22  cat deploy.yml 
+   23  kubectl create -f deploy.yml 
+   24  vim deploy.yml
+   25  kubectl create -f deploy.yml 
+   26  vim deploy.yml
+   27  kubectl create -f deploy.yml 
+   28  vim deploy.yml
+   29  kubectl create -f deploy.yml 
+   30  kubectl get nodes
+   31  eksctl version
+   32  kubectl version
+   33  kubectl version --short
+   34  kubectl version --short --client
+   35  aws eks update-kubeconfig --name eksdemo
+   36  kubectl get nodes
+   37  kubectl get pods
+   38  eksctl create cluster --name eksdemo --version 1.14 --region us-east-2 --nodegroup-name std-workers --node-type t2.micro --nodes 2 --nodes-min 1 --nodes-max 3 --managed
+   39  eksctl delete cluster --name eksdemo
+   40  ls
+   41  kubectl get nodes
+   42  aws eks update-kubeconfig --name eksdemo
+   43  kubectl get nodes
+   44  kubectl get pods
+   45  mkdir k8swe
+   46  cd k8swe/
+   47  ls
+   48  vim pod1.yml
+   49  ls
+   50  kubectl create -f pod1.yml 
+   51  kubectl get nodes
+   52  kubectl get pods
+   53  kubectl discribe pods
+   54  kubectl describe pods
+   55  kubectl get pods -o wide
+   56  cat pod1.yml 
+   57  kubectl describe pods
+   58  kubectl get pods -o wide
+   59  cat pod1.yml 
+   60  cd 
+   61  cd k8swe/
+   62  ls
+   63  kubectl get pods
+   64  kubectl delete pods sample-pod
+   65  kubectl get pods
+   66  ####################3
+   67  # Deployment - object
+   68  vim deploy1.yml
+   69  cat deploy1.yml 
+   70  kubectl create -f deploy1.yml 
+   71  vim deploy1.yml 
+   72  kubectl create -f deploy1.yml 
+   73  kubectl get deploy
+   74  kubectl get pods
+   75  kubectl get pods -o wide
+   76  kubectl get nodes
+   77  kubectl get pods -o wide
+   78  kubectl get rs
+   79  ls
+   80  cat pod1.yml 
+   81  cat deploy1.yml 
+   82  kubectl get pods -o wide
+   83  cd k8swe/
+   84  ls
+   85  ip r
+   86  kubectl get nodes
+   87  kubectl get deploy
+   88  ###################
+   89  # Service - object
+   90  vim service1.yml
+   91  kubectl create -f service1.yml 
+   92  vim service1.yml
+   93  kubectl create -f service1.yml 
+   94  vim service1.yml
+   95  kubectl create -f service1.yml 
+   96  vim service1.yml
+   97  kubectl create -f service1.yml 
+   98  vim service1.yml
+   99  kubectl create -f service1.yml 
+  100  vim service1.yml
+  101  kubectl create -f service1.yml 
+  102  vim service1.yml
+  103  kubectl create -f service1.yml 
+  104  cat service1.yml 
+  105  kubectl get nodes
+  106  kubectl get pods
+  107  kubectl describe pods 
+  108  kubectl describe pods |grep app=
+  109  kubectl get svc
+  110  kubectl get pods -o wide
+  111  cd k8swe/
+  112  ls
+  113  vim deploy1.yml 
+  114  vim service1.yml 
+  115  cat service1.yml 
+  116   v1
+  117  [root@ip-172-31-23-16 k8swe]# cat service1.yml 
+  118  apiVersion: v1
+  119  kind: Service
+  120  metadata:
+  121      name: sample-service
+  122      labels:
+  123        name: app-v1
+  124  spec: 
+  125    ports:
+  126    - port: 80
+  127      nodePort: 30006
+  128      protocol: TCP
+  129    selector:
+  130         app: app-v1[A
+  131  vim deploy1.yml 
+  132  cat service1.yml 
+  133  ls
+  134  eksctl create cluster --name eksdemo --version 1.14 --region us-east-2 --nodegroup-name std-workers --node-type t2.micro --nodes 2 --nodes-min 1 --nodes-max 3 --managed
+  135  aws eks update-kubeconfig --name eksdemo
+  136  kubectl get nodes
+  137  cd k8swe/
+  138  ls
+  139  kubectl get pods
+  140  kubectl get doeploy
+  141  kubectl get deeploy
+  142  kubectl get deploy
+  143  kubectl get rs
+  144  ls
+  145  vim deploy1.yml 
+  146  kubectl create -f deploy1.yml 
+  147  kubectl get deploy
+  148  kubectl get rs
+  149  kubectl get deploy
+  150  kubectl get pods
+  151  kubectl get pods -o wide
+  152  vim service1.yml 
+  153  kubectl describe pods |grep app=
+  154  vim service1.yml 
+  155  kubectl create -f service1.yml 
+  156  kubectl get svc
+  157  kubectl get svc sample-service
+  158  kubectl get pods -o wide
+  159  cat service1.yml 
+  160  cd k8swe/
+  161  ls
+  162  kubectl get svc
+  163  kubectl delete svc sample-service
+  164  ls
+  165  cp service1.yml service2.yml 
+  166  ls
+  167  vim service2.yml 
+  168  kubectl create -f service2.yml 
+  169  kubectl delete svc sample-service
+  170  vim service2.yml 
+  171  kubectl create -f service2.yml 
+  172  kubectl get svc
+  173  eksctl delete cluster --name eksdemo
+  174  eksctl create cluster --name eksdemo --version 1.14 --region us-east-2 --nodegroup-name std-workers --node-type t2.micro --nodes 2 --nodes-min 1 --nodes-max 3 --managed
+  175  cd k8s
+  176  ls
+  177  cd ../k8swe/
+  178  ls
+  179  vim pod1.yml 
+  180  vim deploy1.yml 
+  181  cd k8s
+  182  ls
+  183  vim deploy.yml 
+  184  ls
+  185  vim deploy.yml 
+  186  kubectl create -f deploy.yml 
+  187  aws eks update-kubeconfig --name eksdemo
+  188  kubectl create -f deploy.yml 
+  189  kubectl get deploy
+  190  kubectl get rs
+  191  kubectl getpods
+  192  kubectl get pods
+  193  kubectl get pods -o wide
+  194  vim service.yml
+  195  vim deploy.yml 
+  196  kubectl describe pods
+  197  kubectl describe pods |grep app=
+  198  vim service.yml 
+  199  kubectl create -f service.yml 
+  200  vim service.yml 
+  201  kubectl create -f service.yml 
+  202  vim service.yml 
+  203  kubectl create -f service.yml 
+  204  kubectl get svc
+  205  cat service.yml 
+  206  cd
+  207  cd k8s
+  208  ls
+  209  kubectl get svs service1
+  210  kubectl get svc service1
+  211  kubectl delete svc service1
+  212  kubectl get svc service1
+  213  ls
+  214  cp service.yml service-lb.yml 
+  215  vim service-lb.yml 
+  216  cat service-lb.yml 
+  217  kubectl create -f service-lb.yml 
+  218  kubectl get svc service1
+  219  cd k8s
+  220  ls
+  221  cat service.yml 
+  222  eksctl delete cluster --name eksdemo
+  223  eksctl create cluster --name eksdemo --version 1.14 --region us-east-2 --nodegroup-name std-workers --node-type t2.micro --nodes 2 --nodes-min 1 --nodes-max 3 --managed
+  224  aws eks update-kubeconfig --name eksdemo
+  225  kubectl get nodes
+  226  # Blue - green 
+  227  kubectl get deploy
+  228  kubectl get svc
+  229  kubectl delete svc service1
+  230  kubectl delete deploy deploy1
+  231  kubectl get svc
+  232  kubectl get deploy
+  233  ls
+  234  mv deploy-httpd.yml deploy2.yml
+  235  mv deploy.yml deploy1.yml
+  236  ls
+  237  mv service-lb.yml service-lb1.yml 
+  238  cp service-lb1.yml service-lb2.yml 
+  239  ls
+  240  vim deploy1.yml 
+  241  vim service-lb1.yml 
+  242  vim deploy2.yml 
+  243  vim service-lb2.yml 
+  244  kubectl create -f deploy1.yml 
+  245  kubectl create -f service-lb1.yml 
+  246  kubectl get deploy
+  247  kubectl get svc
+  248  kubectl get rs
+  249  ########
+  250  kubectl create -f deploy2.yml 
+  251  kubectl create -f service-lb2.yml 
+  252  kubectl get deploy
+  253  kubectl get svc
+  254  kubectl get rs
+  255  kubectl get pods
+  256  ls
+  257  cp service-lb1.yml service-lb-BG.yml
+  258  vim service-lb-BG.yml 
+  259  #kubectl apply -f service-lb-BG.yml 
+  260  kubectl get deploy
+  261  kubectl get svc
+  262  kubectl get rs
+  263  kubectl get pods
+  264  #kubectl delete deploy deploy1
+  265  #kubectl delete svc service2
+  266  history 
+  267  kubectl describe pods |grep app=
+  268  ls
+  269  aws eks update-kubeconfig --name eksdemo
+  270  kubectl get nodes
+  271  kubectl get pods
+  272  kubectl get deploy
+  273  cd k8swe/
+  274  ls
+  275  vim deploy1.yml 
+  276  kubectl create -f deploy1.yml 
+  277  kubectl get deploy
+  278  kubectl get pods
+  279  kubectl get pods -o wide
+  280  vim service2.yml 
+  281  vim deploy1.yml 
+  282  kubectl get pods |grep app=
+  283  kubectl describe pods |grep app=
+  284  vim service2.yml 
+  285  kubectl create -f service2.yml 
+  286  kubectl get svc
+  287  vim deploy1.yml 
+  288  kubectl get deploy
+  289  kubectl get svc
+  290  ls
+  291  cat deploy1.yml 
+  292  kubectl apply -f deploy1.yml --record
+  293  kubectl get deploy
+  294  kubectl rollout status deployment sample-deploy
+  295  kubectl get rs
+  296  kubectl rollout history deployment sample-deploy
+  297  ###
+  298  #Rollback
+  299  kubectl describe pods |grep image
+  300  kubectl describe pods |grep container
+  301  kubectl describe pods
+  302  kubectl describe deploy deploy1
+  303  kubectl describe deploy sample-deploy
+  304  kubectl describe deploy sample-deploy |grep Image
+  305  #kubectl rollout undo deployment sample-deploy --to-revision=1
+  306  kubectl get rs
+  307  kubectl rollout history deployment sample-deploy
+  308  kubectl rollout undo deployment sample-deploy --to-revision=1
+  309  kubectl describe deploy sample-deploy |grep Image
+  310  kubectl rollout history deployment sample-deploy
+  311  kubectl describe deploy sample-deploy |grep Image
+  312  kubectl rollout undo deployment sample-deploy --to-revision=2
+  313  kubectl describe deploy sample-deploy |grep Image
+  314  history 
+  315  kubectl get deploy
+  316  kubectl delete deploy sample-deploy
+  317  kubectl get svc
+  318  kubectl delete svc sample-service
+  319  kubectl get svc
+  320  kubectl get pods
+  321  ############################################
+  322  ls
+  323  # Blue- Green Deployment
+  324  ls
+  325  cp deploy1.yml deploy2.yml 
+  326  ls
+  327  cp service2.yml servicelb1.yml
+  328  cp service2.yml servicelb2.yml 
+  329  ls
+  330  vim deploy1.yml 
+  331  vim deploy2.yml 
+  332  vim nginxdemos/hello
+  333  vim servicelb1.yml 
+  334  vim servicelb2.yml 
+  335  kubectl get deploy
+  336  kubectl create -f deploy1.yml 
+  337  kubectl create -f servicelb1.yml 
+  338  kubectl get deploy
+  339  kubectl get svc
+  340  ####
+  341  kubectl create -f deploy2.yml 
+  342  kubectl create -f servicelb2.yml 
+  343  kubectl get deploy
+  344  kubectl get svc
+  345  kubectl describe pods|grep app=
+  346  vim servicelb1.yml 
+  347  kubectl apply -f servicelb1.yml 
+  348  #kubectl delete deploy sample-deploy
+  349  kubectl get deploy
+  350  kubectl delete deploy sample-deploy
+  351  kubectl get svc
+  352  kubectl delete svc sample-service2
+  353  kubectl get deploy
+  354  kubectl get svc
+  355  history

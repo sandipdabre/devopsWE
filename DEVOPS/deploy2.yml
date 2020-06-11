@@ -1,0 +1,18 @@
+apiVersion: extensions/v1beta1
+kind: Deployment
+metadata:
+    name: sample-deploy2
+
+spec: 
+  replicas: 2
+  template:
+       metadata:
+           labels:
+              app: app-v2
+
+       spec:
+           containers:
+           - name: sample-container
+             image: nginxdemos/hello
+             ports:
+             - containerPort: 80

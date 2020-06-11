@@ -1,0 +1,20 @@
+289  vim deploy.yml 
+  290  vim deploy-httpd.yml 
+  291  kubectl get svc
+  292  kubectl create -f deploy.yml 
+  293  kubectl create -f service-lb.yml 
+  294  kubectl get svc
+  295  vim service-lb.yml 
+  296  kubectl create -f service-lb.yml 
+  297  kubectl get svc
+  298  vim deploy-httpd.yml 
+  299  kubectl get svc
+  300  kubectl get deploy
+  301  kubectl apply -f deploy-httpd.yml --record
+  302  kubectl rollout status deployment deploy1
+  303  kubectl get deploy
+  304  kubectl get rs
+  305  kubectl rollout history deployment deploy1
+  306  kubectl rollout undo deployment deploy1 --to-revision=1
+  307  kubectl get rs
+  308  history 

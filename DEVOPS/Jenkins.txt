@@ -1,0 +1,29 @@
+#######################*Jenkins Setup*########################
+yum install java-1.8.0* -y
+
+which java
+
+vim /etc/profile
+
+export JAVA_HOME=/bin/java
+export JPATH=$JAVA_HOME/bin
+
+source /etc/profile
+
+https://jenkins.io/
+yum install wget -y
+
+sudo wget -O /etc/yum.repos.d/jenkins.repo https://pkg.jenkins.io/redhat-stable/jenkins.repo
+sudo rpm --import https://pkg.jenkins.io/redhat-stable/jenkins.io.key
+
+yum install jenkins -y
+
+systemctl restart jenkins
+systemctl enable jenkins
+firewall-cmd --permanent --add-port=8080/tcp
+firewall-cmd --reload
+
+* Go on Browser 
+ip-address-of-jenkins-server:8080
+
+cat /var/lib/jenkins/secrets/initialAdminPassword
